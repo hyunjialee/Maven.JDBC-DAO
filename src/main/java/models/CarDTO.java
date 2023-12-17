@@ -10,6 +10,16 @@ public class CarDTO implements CarDTOInterface{
     private int vin;
 
     public CarDTO () {
+    }
+
+    public CarDTO(String make, String model, String year, String color, int vin) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.vin = vin;
+    }
+    public CarDTO(int id, String make, String model, String year, String color, int vin) {
         this.id = id;
         this.make = make;
         this.model = model;
@@ -17,9 +27,10 @@ public class CarDTO implements CarDTOInterface{
         this.color = color;
         this.vin = vin;
     }
+
     @Override
     public int getID() {
-        return 0;
+        return this.id;
     }
     public void setId(int id) {
         this.id = id;
